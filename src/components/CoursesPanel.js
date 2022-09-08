@@ -1,6 +1,7 @@
 import React, { useContext } from 'react'
 import CourseCard from './CourseCard'
 import { DataContext } from '../contexts/dataContext';
+import { Link } from 'react-router-dom';
 function CoursesPanel() {
   let ListCards=[];
   let data=useContext(DataContext);
@@ -9,7 +10,7 @@ function CoursesPanel() {
   
   for(let i in data["data"][0]["items"]){
     let course=data["data"][0]["items"][i];
-    ListCards.push(<CourseCard key={course["id"]} title={course["title"]} src={course["cover"]} instructor={course["visible_instructors"]} rate={course["rating"].toFixed(1)} price={course["price"]} />);
+    ListCards.push(<Link to={`/courses/${data["data"][0]["items"][i]["id"]}` } style={{ textDecoration: 'none',color:"black" }}><CourseCard key={i} title={course["title"]} src={course["cover"]} instructor={course["visible_instructors"]} rate={course["rating"].toFixed(1)} price={course["price"]} /></Link>);
   }
   return (
     <div className='course-panel'>

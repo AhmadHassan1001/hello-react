@@ -30,6 +30,7 @@ function App() {
       console.log("json1");
       console.log(json);
       let json2={"data":json["homepage"],"isloading":false,"error":""};
+      ///let json2={"data":json,"isloading":false,"error":""};
       setData(json2);
       console.log(json2);
       
