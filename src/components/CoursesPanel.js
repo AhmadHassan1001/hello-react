@@ -1,18 +1,25 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import CourseCard from './CourseCard'
-function CoursesPanel(props) {
+import { DataContext } from '../contexts/dataContext';
+function CoursesPanel() {
   let ListCards=[];
-
+  let data=useContext(DataContext);
+  console.log('childContext');
+  
+  
+  for(let i in data["data"][0]["items"]){
+    let course=data["data"][0]["items"][i];
+    ListCards.push(<CourseCard key={course["id"]} title={course["title"]} src={course["cover"]} instructor={course["visible_instructors"]} rate={course["rating"].toFixed(1)} price={course["price"]} />);
+  }
   return (
     <div className='course-panel'>
-        <h2>{props.title}</h2>
+        <h2>{data["data"][0]["header"]}</h2>
         <p>
-            {props.description}
+            {data["data"][0]["description"]}
         </p>
         <button className="explore-btn nav-btn">Explore python</button>
         <div className='courses-cards-panel'>
-            {props.data.map((course)=><CourseCard key={course.id} title={course.title} src={course.image} instructor={course.instructor} rate={course.stars} price={course.price} />
-            )}
+            {ListCards}
         </div>
     </div>
   )

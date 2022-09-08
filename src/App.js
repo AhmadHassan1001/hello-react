@@ -1,37 +1,58 @@
 import './App.css';
 
-import CoursesPanel from './components/CoursesPanel';
+
+import {useState,useEffect} from 'react';
+
+import {DataProvider} from './contexts/dataContext';
+import search from './functions/search';
+import {
+  Routes,
+  Route,
+} from "react-router-dom";
+
+import Home from './components/Home';
+import CoursePage from './components/CoursePage';
+import UdemyNavBar from './components/UdemyNavBar';
+import UdemyFooter from './components/UdemyFooter';
+
 
 function App() {
-  let data=[{
-    id:'0',
-    title: 'learn python from zero to hero',
-    instructor: 'jose portila',
-    stars:4,
-    price: 39,
-    image:"\\images\\Screenshot 2022-08-04 225212.png"
-  },{
-    id:'1',
-    title: 'learn python from zero to hero',
-    instructor: 'jose portila',
-    stars:4,
-    price: 39,
-    image:"\\images\\Screenshot 2022-08-04 225212.png"
-  },{
-    id:'2',
-    title: 'learn python from zero to hero',
-    instructor: 'jose portila',
-    stars:4,
-    price: 39,
-    image:"\\images\\Screenshot 2022-08-04 225212.png"
-  }];
-  let title="Expand your career opportunities with Python";
-  let description="Take one of Udemy’s range of Python courses and learn how to code using this incredibly useful language. Its simple syntax and readability makes Python perfect for Flask, Django, data science, and machine learning. You’ll learn how to build everything from games to sites to apps. Choose from a range of courses that will appeal to both beginners and advanced developers alike.";
-  return (
-    <div className="App">
-      <CoursesPanel data={data} title={title} description={description}/>
-    </div>
-  );
+  const [data,setData]=useState({"data":[],"isloading":true,"error":""});
+  console.log("Parent");
+  useEffect(()=>{
+    if(data["isloading"]){
+      fetch('http://localhost:4000/homepage')
+    .then((response)=>{
+      return response.json();
+    })
+    .then((json)=>{
+      console.log("json1");
+      console.log(json);
+      let json2={"data":json,"isloading":false,"error":""};
+      setData(json2);
+      console.log(json2);
+      
+    });
+    }
+    
+  },[]);
+
+  
+    return (
+
+      <DataProvider value={data}>
+        <div className="App">
+          <UdemyNavBar/>
+          <Routes>
+            <Route path='/' element={<Home/>}></Route>
+            <Route path='/courses/:courseId' element={<CoursePage/>}></Route>
+          </Routes>
+          <UdemyFooter/>
+        </div>
+
+      </DataProvider>
+    );
+
 }
 
 export default App;
