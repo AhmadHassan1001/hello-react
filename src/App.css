@@ -66,7 +66,7 @@
 
 .courses-cards-panel{
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: center;
 }
 .search-input{
