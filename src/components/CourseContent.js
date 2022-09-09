@@ -56,9 +56,10 @@ function CourseContent(props) {
                     {ListSections2}
                 </div>
             </Collapse>
-            <button className={moreSections?'more-btn-unvisible':'more-btn'} onClick={()=>setMore(!moreSections)}>
+            {sections["curriculum_context"]["data"]["sections"].length - 10>0?<button className={moreSections?'more-btn-unvisible':'more-btn'} onClick={()=>setMore(!moreSections)}>
                 {sections["curriculum_context"]["data"]["sections"].length - 10} more sections</button>
-        </div>
+        :<></>}
+            </div>
         </>
     )
 }

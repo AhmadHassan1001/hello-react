@@ -10,7 +10,7 @@ function CoursesPanel() {
   
   for(let i in data["data"][0]["items"]){
     let course=data["data"][0]["items"][i];
-    ListCards.push(<Link to={`/courses/${data["data"][0]["items"][i]["id"]}` } style={{ textDecoration: 'none',color:"black" }}><CourseCard key={i} title={course["title"]} src={course["cover"]} instructor={course["visible_instructors"]} rate={course["rating"].toFixed(1)} price={course["price"]} /></Link>);
+    ListCards.push(<Link to={`/courses/${data["data"][0]["items"][i]["id"]}` } style={{ textDecoration: 'none',color:"black" }}><CourseCard key={i} title={course["title"]} src={course["cover"]} instructor={course["visible_instructors"]} rate={course["rating"].toFixed(1)} price={course["price"]} students={course["num_subscribers"]} /></Link>);
   }
   return (
     <div className='course-panel'>

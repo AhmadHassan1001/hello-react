@@ -6,7 +6,7 @@ import CourseDetailsCard from './CourseDetailsCard';
 import FeedBack from './FeedBack';
 import InstructorDetails from './InstructorDetails';
 import Review from './Review';
-import {InfoCircleFill,Globe,BadgeCcFill, Search} from 'react-bootstrap-icons';
+import {InfoCircleFill,Globe,BadgeCcFill, Search, CheckLg} from 'react-bootstrap-icons';
 import StareRate from './StareRate';
 import DescriptionCourse from './DescriptionCourse';
 import Reviews from './Reviews';
@@ -61,6 +61,11 @@ function CoursePage() {
             ListInstructors.push(
                 <InstructorDetails data={coursedata["visible_instructors"][i]}/>);
         }
+        let LearnItems=[];
+        
+        for(let i in coursedata["objectives_summary"]){
+            LearnItems.push(<p><CheckLg/><span className='ms-2'>{coursedata["objectives_summary"][i]}</span></p>);
+        }
 
       return (
         <>
@@ -91,7 +96,14 @@ function CoursePage() {
                 
             </div>
 
+
             <div className='course-body'>
+                <div className='will-learn'>
+                    <h2>What you'll learn</h2>
+                    <div className='learn-items'>
+                        {LearnItems}
+                    </div>
+                </div>
                 <h3>Course content</h3>
                 
                 

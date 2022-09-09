@@ -9,14 +9,38 @@
   color: grey;
 }
 .course-card-img{
-  width: 20vw;
+  width: 100%;
   max-width: 300px;
   min-width: 200px;
   object-fit: cover;
+  background-color: #1c1d1f;
+}
+
+.tooltip-course.show {
+  opacity: 1;
+  
+  background-color: white;
+  border:1px solid black;
+}
+
+.course-card-img:hover{
+  opacity: 0.5;
+}
+.course-card .img-bg{
+  background-color: black;
+  width: 100%;
+
+}
+.rate {
+  display: flex;
 }
 .rate label{
-  color: red;
+  color: #b4690e;
   font-weight: 700;
+  margin-right: 5px;
+}
+.rate .students{
+  color: gray;
 }
 .course-panel{
   border: solid;
@@ -72,6 +96,14 @@
 }
 
 .course-details-card{
+  position: absolute;
+  top: 100px;
+  right: 10vw;
+  z-index: 2;
+  overflow: visible;
+  height: 100%;
+}
+.course-details-card-behind{
   position: absolute;
   top: 100px;
   right: 10vw;
@@ -218,6 +250,20 @@
 }
 .course-body li{
   font-size: 15px;
+}
+
+.course-body .will-learn{
+  border: 1px solid gray;
+  padding: 20px;
+}
+.course-body .will-learn h2{
+  font-weight: 700;
+  font-size: 20px;
+}
+.course-body .will-learn .learn-items{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 
