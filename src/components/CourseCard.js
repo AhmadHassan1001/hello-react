@@ -15,6 +15,7 @@ function CourseCard(props) {
   }
 
   console.log(props.instructor);
+  
   return (
     <div className='course-card'>
         <div className='img-bg'>
@@ -26,7 +27,7 @@ function CourseCard(props) {
         <div className='rate'>
             <label>{props.rate}</label>
             <StareRate value={props.rate} color="#e59819"/>
-            <span className='students'>({props.students.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")})</span>
+            {props.students&&<span className='students'>({props.students.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")})</span>}
         </div>
         <h4>E£{props.price}</h4>
     </div>

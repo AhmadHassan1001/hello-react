@@ -12,12 +12,12 @@ function CoursePanelSearch(props) {
       console.log(course["title"].toLowerCase().indexOf(props.query.toLowerCase()));
 
       if(course["title"].toLowerCase().indexOf(props.query.toLowerCase())!==-1)
-        ListCards.push(<CourseCard key={course["id"]} title={course["title"]} src={course["cover"]} instructor={course["visible_instructors"]} rate={course["rating"].toFixed(1)} price={course["price"]} />);
+        ListCards.push(<CourseCard key={course["id"]} title={course["title"]} src={course["cover"]} instructor={course["visible_instructors"]} rate={course["rating"].toFixed(1)} price={course["price"]} students={course["num_subscribers"]} />);
     }
     return (
       <div className='course-panel'>
           <h2>Results:</h2>
-          <div className='courses-cards-panel'>
+          <div className='courses-cards-panel d-flex flex-wrap'>
               {ListCards}
           </div>
       </div>
