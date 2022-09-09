@@ -56,6 +56,9 @@
   margin: 5px;
   border-width: 1px;
 }
+.nav-link:hover{
+  color: #a435f0;
+}
 .explore-btn {
   background-color: white;
   color: black;

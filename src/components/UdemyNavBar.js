@@ -26,16 +26,16 @@ function UdemyNavBar() {
                     <img className="nav-logo ms-3 nav-el" src="/images/Udemy_logo.png" alt="logo"
                     />
                 </Link>
-                <a className="nav-link link-dark text-decoration-none m-3">Categories</a>
+                <a className="nav-link  text-decoration-none m-3">Categories</a>
                 <form action="" className="search-form">
                     <input className="search-input" type="text" placeholder="Search for anything" value={searchText} onChange={handleSearch} />
                     <button type="button" className="search-btn" onClick={search}><img
                         className="search-btn-img" src="/images/61088.png"
                         alt="search" /></button>
                 </form>
-                <a className="nav-link link-dark text-decoration-none m-3">Udemy
+                <a className="nav-link text-decoration-none m-3">Udemy
                     Business</a>
-                <a className="nav-link link-dark text-decoration-none m-3">Teach on
+                <a className="nav-link  text-decoration-none m-3">Teach on
                     Udemy</a>
 
                 <button className="nav-btn login-btn">Log in</button>
