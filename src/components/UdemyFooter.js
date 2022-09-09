@@ -5,7 +5,7 @@ function UdemyFooter() {
     return (
         <footer>
             <div className='d-flex justify-content-between'>
-                <div className='d-flex w-50 justify-content-between'>
+                <div className='footer-links w-50 justify-content-between'>
                     <ul className='footer-links-group'>
                         <li>Udemy Business</li>
                         <li>Teach on Udemy</li>

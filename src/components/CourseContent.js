@@ -41,7 +41,7 @@ function CourseContent(props) {
 
     return (
         <>
-        <div className='d-flex justify-content-between'>
+        <div className='d-md-flex justify-content-between'>
 
         <p>{sections["curriculum_context"]["data"]["sections"].length} sections • {sections["curriculum_context"]["data"]["num_of_published_lectures"]} lectures • {sections["curriculum_context"]["data"]["estimated_content_length_text"]} total length</p>
         <button className='toggles' onClick={()=>setToggles(!toggles)}>

@@ -60,6 +60,9 @@
   background-color: white;
   color: black;
 }
+.explore-btn:hover {
+  background-color: rgb(230, 230, 230);
+}
 
 .courses-cards-panel{
   display: flex;
@@ -147,11 +150,18 @@
   height: 40px;
   font-weight: 700;
 }
+.add-cart-btn:hover{
+  background-color: #8929ca;
+}
 .course-details-card-comp .buy-btn{
   background-color: white;
   color: black;
   border: solid;
   border-width: 1px;
+}
+
+.buy-btn:hover{
+  background-color: rgb(230, 230, 230);
 }
 .course-details-card-comp h6{
   color: rgb(103, 100, 100);
@@ -180,6 +190,7 @@
   border-bottom: solid;
   border-width: 1px;
 }
+
 
 .course-details-card-comp .more-training{
   margin: 10px;
@@ -231,6 +242,9 @@
   height: 40px;
   margin-top: 10px;
 }
+.sections .more-btn:hover{
+  background-color: rgb(230, 230, 230);
+}
 
 .sections .more-btn-unvisible{
   display: none;
@@ -243,6 +257,9 @@
   background-color: white;
   color:#5624d0;
   font-weight: 700;
+}
+.toggles:hover{
+  color:#8929ca;
 }
 .course-body h3{
   font-weight: 700;
@@ -358,6 +375,10 @@
   display: flex;
   justify-content: center;
 }
+.review .review-details .like:hover{
+ 
+  background-color: rgb(230, 230, 230);
+}
 .review .review-details .dis-like{
   display: flex;
   width: 40px;
@@ -370,6 +391,10 @@
   margin: 10px;
   align-items: center;
   justify-content: center;
+}
+.review .review-details .dis-like:hover{
+ 
+  background-color: rgb(230, 230, 230);
 }
 .review .review-details .review-actions{
   display: flex;
@@ -398,7 +423,12 @@ footer button{
   border-width: 1px;
   text-align: start;
 }
-
+footer button:hover{
+  background-color: #2f3134;
+}
+.footer-links{
+  display: flex;
+}
 .stars{
   align-items: center;
   margin-right: 5px;
@@ -418,7 +448,13 @@ footer button{
 .money-small span{
   font-weight: 700;
 }
-
+.money-small .actions{
+  display: block;
+}
+.money-small .actions span{
+  display: block;
+  text-align: center;
+}
 
 .reviews-query{
   display: flex;
@@ -445,6 +481,11 @@ footer button{
   width: 50px;
   height: 50px;
   color: white;
+  background-color: #1c1d1f;
+
+}
+.reviews-query .search-review button:hover{
+  
   background-color: black;
 
 }
@@ -461,6 +502,10 @@ footer button{
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.reviews-query .dropdown-toggle-btn:hover{
+
+  background-color: rgb(230, 230, 230);
 }
 .reviews-query .dropdown-menu{
   width: 180px;
@@ -490,11 +535,15 @@ footer button{
   }
   .course-header .meta-data{
     display: block;
+    width: 100%;
+  }
+  .course-header .meta-data p{
+    width: 100%;
   }
 
-  .money-small{
-    display: block;
-  }
+ 
+
+
   .course-body{
     margin:  30px 5vw 30px 5vw ;
   }
@@ -522,6 +571,9 @@ footer button{
   }
   .feedback .rate-slider{
     width: 50vw;
+  }
+  .footer-links{
+    display: block;
   }
   
 }

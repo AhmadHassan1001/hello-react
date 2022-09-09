@@ -71,8 +71,13 @@ body{
 }
 .language-btn{
     
-    background-color: transparent;
+    background-color: white;
     width: 40px;
+}
+.language-btn:hover{
+
+    background-color: rgb(230, 230, 230);
+
 }
 
 .language-img{
@@ -81,9 +86,14 @@ body{
 
 .signup-btn{
 
-    background-color: black;
+    background-color: #1c1d1f;
     color: white;
     width: 80px;
+
+}
+.signup-btn:hover{
+
+    background-color: black;
 
 }
 .login-btn{
@@ -91,6 +101,11 @@ body{
     background-color: white;
     color: black;
     width: 80px;
+
+}
+.login-btn:hover{
+
+    background-color: rgb(230, 230, 230);
 
 }
 

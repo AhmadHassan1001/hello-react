@@ -79,7 +79,7 @@ function CoursePage() {
                 <img className="course-header-img" src={coursedata["cover"]}/>
                 <h3>{coursedata["title"]}</h3>
                 <h5>{coursedata["headline"]}</h5>
-                <p className='d-flex'><span className='rate-value d-flex'><span className='me-2'>{coursedata["rating"].toFixed(1)}</span> <StareRate value={coursedata["rating"].toFixed(1)}/></span>   {coursedata["num_subscribers"].toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} students</p>
+                <p className='d-flex'><span className='rate-value d-flex'><span className='me-2 d-flex align-items-center'>{coursedata["rating"].toFixed(1)}</span> <StareRate value={coursedata["rating"].toFixed(1)}/></span>   {coursedata["num_subscribers"].toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} students</p>
                 <p className='instructors'>Created by <span>{instructor}</span></p>
                 <div className='meta-data'><p><InfoCircleFill/> Last updated {coursedata["last_update_date"]}</p> <p><Globe/> {coursedata["locale"]["title"]}</p> <p><BadgeCcFill/> {coursedata["caption_languages"][0]}</p></div>
                 
@@ -90,7 +90,7 @@ function CoursePage() {
 
                     <h6 className='text-center'>30-Day Money-Back Guarantee</h6>
                     <h6 className='text-center'>Full Lifetime Access</h6>
-                    <div className='actions d-flex justify-content-around mt-3'><span>Share</span><span>Gift this course</span><span>Apply Coupon</span></div>
+                    <div className='actions justify-content-around mt-3'><span>Share</span><span>Gift this course</span><span>Apply Coupon</span></div>
 
                 </div>
                 

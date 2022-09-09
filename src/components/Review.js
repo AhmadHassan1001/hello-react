@@ -13,7 +13,7 @@ function Review(props) {
                     <StareRate value={props.review["rating"]} color="#e59819"/>
                     <div class="content" dangerouslySetInnerHTML={{ __html: props.review["content_html"] }}></div>
                     <h7>Was this review helpful?</h7>
-                    <div className='review-actions '>
+                    <div className='review-actions'>
                         <button className='like'><HandThumbsUp/></button>
                         <button className='dis-like'><HandThumbsDown/></button>
                         <span>Report</span>
